@@ -5227,7 +5227,6 @@ ul {
   position: relative;
   display: block;
   padding: 154px 50px 8px;
-  background-color: #f2edea;
   border-bottom-left-radius: var(--delogis-bdr-radius);
   border-bottom-right-radius: var(--delogis-bdr-radius);
 }
@@ -6258,7 +6257,6 @@ ul {
 .why-choose-two {
   position: relative;
   display: block;
-  background-color: #f1ece9;
   padding: 120px 0 180px;
   z-index: 1;
 }
@@ -7027,21 +7025,7 @@ ul {
   z-index: 1;
 }
 
-.counter-one__icon:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  content: "";
-  border-radius: 50%;
-  background-color: var(--delogis-white);
-  transform: scale(0);
-  transform-origin: center;
-  transform-style: preserve-3d;
-  transition: all 0.4s cubic-bezier(0.62, 0.21, 0.45, 1.52);
-  z-index: -1;
-}
+
 
 .counter-one__count-box li:hover .counter-one__icon:before {
   transform: scaleX(1);
@@ -11461,7 +11445,7 @@ ul {
   height: 60px;
   width: 100%;
   border: none;
-  background-color: var(--delogis-primary);
+  background-color: rgb(231, 231, 231);
   padding-left: 30px;
   padding-right: 30px;
   outline: none;
@@ -11489,7 +11473,7 @@ ul {
 
 .contact-page__form-input-box .bootstrap-select>.dropdown-toggle {
   position: relative;
-  background-color: var(--delogis-primary) !important;
+  background-color: rgb(231, 231, 231) !important;
   border-radius: 0;
   color: var(--delogis-gray) !important;
   font-size: 13px;
@@ -11528,7 +11512,7 @@ ul {
   font-weight: 400;
   height: 168px;
   width: 100%;
-  background-color: var(--delogis-primary);
+  background-color: rgb(231, 231, 231);
   padding: 20px 30px 30px;
   border: none;
   outline: none;
@@ -15203,4 +15187,14 @@ body.boxed-wrapper {
 
 .boxed-wrapper .main-menu__contact-list li+li {
   margin-left: 16px;
+}
+
+.logo-principal{
+  max-width: 10%;
+}
+
+@media (max-width: 768px) {
+  .logo-principal {
+      max-width: 100%;
+  }
 }
