@@ -5353,7 +5353,7 @@ ul {
 .site-footer {
   position: relative;
   display: block;
-  background-color: #1a1414;
+  background-color: rgba(3, 72, 115, 0.9);
   overflow: hidden;
   z-index: 1;
 }
@@ -5374,7 +5374,7 @@ ul {
 .site-footer__top {
   position: relative;
   display: block;
-  background-color: #120e0e;
+  background-color: #00253b;
   padding: 25px 0px 25px;
   z-index: 1;
 }
@@ -5438,7 +5438,7 @@ ul {
   font-size: 15px;
   font-weight: 400;
   font-family: var(--delogis-font);
-  color: #978e8e;
+  color: var(--delogis-white);
   margin-left: 23px;
 }
 
@@ -5494,7 +5494,7 @@ ul {
   color: var(--delogis-white);
   font-size: 15px;
   border-radius: 50%;
-  background-color: #2e2626;
+  background-color: #034873;
   overflow: hidden;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
@@ -5599,7 +5599,7 @@ ul {
 
 .footer-widget__link-list li a {
   position: relative;
-  color: #978e8e;
+  color: #ffffff;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -5641,7 +5641,7 @@ ul {
   justify-content: center;
   width: 40px;
   height: 40px;
-  background-color: #2e2626;
+  border: 1px solid var(--delogis-white);
   border-radius: 50%;
   color: var(--delogis-base);
   font-size: 15px;
@@ -5657,7 +5657,7 @@ ul {
 .footer-widget__Contact-list li .text>span {
   font-size: 12px;
   font-weight: 400;
-  color: #978e8e;
+  color: white;
 }
 
 .footer-widget__Contact-list li .text p {
@@ -5741,13 +5741,13 @@ ul {
 }
 
 .site-footer__bottom-text {
-  color: #978e8e;
+  color: white;
   font-size: 15px;
   font-weight: 400;
 }
 
 .site-footer__bottom-text a {
-  color: #978e8e;
+  color: white;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
@@ -7212,7 +7212,7 @@ ul {
 .faq-one {
   position: relative;
   display: block;
-  background-color: #f1ece9;
+
   padding: 120px 0 120px;
   z-index: 1;
 }
