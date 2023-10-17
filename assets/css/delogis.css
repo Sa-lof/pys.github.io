@@ -12776,7 +12776,7 @@ ul {
   height: 60px;
   width: 100%;
   border: none;
-  background-color: var(--delogis-primary);
+  background-color: rgb(242, 241, 241);
   padding-left: 30px;
   padding-right: 30px;
   outline: none;
@@ -13000,7 +13000,7 @@ ul {
   display: block;
   padding: 46px 30px 35px;
   border-radius: var(--delogis-bdr-radius);
-  background-color: var(--delogis-primary);
+  background-color: rgb(242, 241, 241);
 }
 
 .sidebar__category .sidebar__title {
@@ -13043,7 +13043,7 @@ ul {
   right: 20px;
   width: 10px;
   height: 10px;
-  border: 1px solid #847c7c;
+  border: 1px solid #034873;
   transform: translateY(-50%);
   border-radius: 50%;
   -webkit-transition: all 500ms ease;
@@ -13051,7 +13051,7 @@ ul {
 }
 
 .sidebar__category-list li a:hover::before {
-  background-color: #976147;
+  background-color: #034873;
   border: 1px solid transparent;
 }
 
@@ -13167,7 +13167,7 @@ ul {
   position: relative;
   display: block;
   padding: 46px 50px 50px;
-  background-color: var(--delogis-primary);
+  background-color: rgb(242, 241, 241);
   border-radius: var(--delogis-bdr-radius);
   z-index: 1;
 }
