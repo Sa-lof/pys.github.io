@@ -11354,12 +11354,7 @@ ul {
   transition: opacity 500ms ease, visibility 500ms ease, transform 700ms ease, -webkit-transform 700ms ease;
 }
 
-.gallery-page__single:hover .gallery-page__img:before {
-  opacity: .90;
-  visibility: visible;
-  -webkit-transform: scaleY(1) translateZ(0px);
-  transform: scaleY(1) translateZ(0px);
-}
+
 
 .gallery-page__img img {
   width: 100%;
