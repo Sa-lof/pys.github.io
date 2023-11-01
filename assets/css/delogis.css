@@ -4545,8 +4545,8 @@ ul {
 
 .cases-one__content {
   position: absolute;
-  bottom: 49px;
-  left: 50px;
+  bottom: 35px;
+  left: 20px;
   transition: all 500ms ease;
   transform: translate3d(0px, 159%, 0px);
   z-index: 2;
@@ -4570,24 +4570,22 @@ ul {
   font-weight: 400;
   line-height: 30px;
   margin-top: 13px;
+  color: white;
 }
 
-.cases-one__title a {
+.cases-one__title {
   color: var(--delogis-white);
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
 }
 
-.cases-one__title a:hover {
-  color: #bda499;
-}
 
 .cases-one__shape-1 {
   position: absolute;
   left: -76px;
   bottom: -94px;
-  width: 377px;
-  height: 377px;
+  width: 277px;
+  height: 277px;
   background-color: #024873;
   border-radius: 50%;
   -webkit-transition-delay: .1s;
