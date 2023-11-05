@@ -6146,7 +6146,6 @@ ul {
 .services-two__content {
   position: relative;
   display: block;
-  background-color: #024873;
   border-bottom-left-radius: var(--delogis-bdr-radius);
   border-bottom-right-radius: var(--delogis-bdr-radius);
   z-index: 1;
@@ -6435,7 +6434,6 @@ ul {
 }
 
 .why-choose-two__img img {
-  width: 100%;
   border-radius: var(--delogis-bdr-radius);
 }
 
@@ -8791,7 +8789,7 @@ ul {
 .testimonial-three {
   position: relative;
   display: block;
-  background-color: var(--delogis-black);
+  background-color: #FEFEFE;
   padding: 107px 0 114px;
   z-index: 1;
 }
@@ -8854,7 +8852,7 @@ ul {
   font-size: 30px;
   font-weight: 300;
   line-height: 44px;
-  color: var(--delogis-white);
+  color: var(--delogis-base);
 }
 
 .testimonial-three__client-name {
@@ -8866,7 +8864,7 @@ ul {
 .testimonial-three__client-name h4 {
   font-size: 24px;
   font-weight: 400;
-  color: var(--delogis-white);
+  color: var(--delogis-base);
 }
 
 .testimonial-three__client-name h4 span {
@@ -15191,3 +15189,4 @@ body.boxed-wrapper {
       max-width: 100%;
   }
 }
+
