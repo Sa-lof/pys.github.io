@@ -1312,9 +1312,6 @@
                   </section>
                   <div class="blog-details__bottom">
                     <p class="blog-details__tags">
-                      <span>Tags</span>
-                      <a href="#">Depression</a>
-                      <a href="#">Addict</a>
                     </p>
                     <div class="blog-details__social-list">
                       <a href="#"><i class="fab fa-twitter"></i></a>
@@ -1328,17 +1325,6 @@
             </div>
             <div class="col-xl-4 col-lg-5">
               <div class="sidebar">
-                <div class="sidebar__single sidebar__category">
-                  <h3 class="sidebar__title">Categories</h3>
-                  <ul class="sidebar__category-list list-unstyled">
-                    <li><a href="blog-details.html">Stress Management</a></li>
-                    <li><a href="blog-details.html">Mental Health</a></li>
-                    <li><a href="blog-details.html">Depressions</a></li>
-                    <li><a href="blog-details.html">Therapies</a></li>
-                    <li><a href="blog-details.html">Counseling</a></li>
-                  </ul>
-                </div>
-
                 <div class="sidebar__single sidebar__tags">
                   <h3 class="sidebar__title">Tags</h3>
                   <div class="sidebar__tags-list">
@@ -1350,7 +1336,7 @@
                   </div>
                 </div>
                 <div class="comment-form">
-                  <h3 class="comment-form__title">Leave a Comment</h3>
+                  <h3 class="comment-form__title">Deja un comentario</h3>
                   <form
                     action="assets/inc/sendemail.php"
                     class="comment-one__form contact-form-validated"
@@ -1361,7 +1347,7 @@
                         <div class="comment-form__input-box">
                           <input
                             type="text"
-                            placeholder="Your Name"
+                            placeholder="Nombre"
                             name="name"
                           />
                         </div>
@@ -1370,7 +1356,7 @@
                         <div class="comment-form__input-box">
                           <input
                             type="email"
-                            placeholder="Email Address"
+                            placeholder="Correo electrónico"
                             name="email"
                           />
                         </div>
@@ -1381,7 +1367,7 @@
                         <div class="comment-form__input-box text-message-box">
                           <textarea
                             name="message"
-                            placeholder="Write  a Comment"
+                            placeholder="Comentario"
                           ></textarea>
                         </div>
                         <div class="comment-form__btn-box">
@@ -1583,9 +1569,71 @@
                   '27': 'Organización Mundial de la Salud',
               };
 
+              const imagenes = {
+                  '1': 'assets/images/blog/blog1.png',
+                  '2': 'assets/images/blog/blog2.png',
+                  '3': 'assets/images/blog/blog3.png',
+                  '4': 'assets/images/blog/blog4.png',
+                  '5': 'assets/images/blog/blog5.png',
+                  '6': 'assets/images/blog/blog6.png',
+                  '7': 'assets/images/blog/blog7.png',
+                  '8': 'assets/images/blog/blog8.png',
+                  '9': 'assets/images/blog/blog9.png',
+                  '10': 'assets/images/blog/blog10.png',
+                  '11': 'assets/images/blog/blog11.png',
+                  '12': 'assets/images/blog/blog12.png',
+                  '13': 'assets/images/blog/blog13.png',
+                  '14': 'assets/images/blog/blog14.png',
+                  '15': 'assets/images/blog/blog15.png',
+                  '16': 'assets/images/blog/blog16.png',
+                  '17': 'assets/images/blog/blog17.png',
+                  '18': 'assets/images/blog/blog18.png',
+                  '19': 'assets/images/blog/blog19.png',
+                  '20': 'assets/images/blog/blog20.png',
+                  '21': 'assets/images/blog/blog21.png',
+                  '22': 'assets/images/blog/blog22.png',
+                  '23': 'assets/images/blog/blog23.png',
+                  '24': 'assets/images/blog/blog24.png',
+                  '25': 'assets/images/blog/blog25.png',
+                  '26': 'assets/images/blog/blog26.png',
+                  '27': 'assets/images/blog/blog27.png',
+              };
+
+              const tags = {
+                  '1': ['Prevención del Suicidio', 'Salud Mental', 'Estigma Social', 'Apoyo Psicológico', 'Intervención en Crisis', 'Día Mundial para la Prevención del Suicidio'],
+                  '2': ['Parentalidad', 'Competencias Parentales', 'Crianza', 'Salud Mental', 'Relación Padres E Hijos', 'Descanso Parental'],
+                  '3': ['Posmodernidad', 'Redes Sociales', 'Comunicación Digital', 'Consumismo', 'Relaciones Sociales', 'Identidad Social'],
+                  '4': ['Disciplina Positiva', 'Alfred Adler', 'Educación Infantil', 'Estilos Educativos', 'Consecuencias Lógicas', 'Comunicación Respetuosa'],
+                  '5': ['Obesidad', 'Salud Mental', 'Psicología', 'Relación Con La Comida', 'Desarrollo Psicosexual', 'Despensa Afectiva'],
+                  '6': ['Amistad', 'Adolescencia', 'Desarrollo Cognitivo', 'Amor', 'Enamoramiento', 'Emociones Adolescentes'],
+                  '7': ['Rituales De Inicio De Año', 'Interaccionismo Simbólico', 'Significados Subjetivos', 'Psicología Cultural', 'Cambio Temporal', 'Efectos En La Psique'],
+                  '8': ['Terapia Cognitivo Conductual', 'Psicoanálisis', 'Humanismo', 'Enfoques Terapéuticos', 'Abordaje Clínico', 'Intersubjetividad'],
+                  '9': ['Estrés', 'Manejo Del Estrés', 'Afrontar El Estrés', 'Distres', 'Eustrés', 'Salud Mental'],
+                  '10': ['Procrastinación', 'Tiempo', 'Demanda Externa', 'Sistema Educativo', 'Trabajo', 'Monotonía'],
+                  '11': ['Éxito', 'Fracaso', 'Reflexión', 'Individualidad', 'Subjetividad', 'Estándares Sociales'],
+                  '12': ['Año Nuevo', 'Desarrollo Personal', 'Responsabilidad', 'Responsabilidad', 'Causalidad', 'Consciencia'],
+                  '13': ['Cultura Mexicana', 'Día De Muertos', 'Perspectiva De La Muerte', 'Sublimación', 'Rituales', 'Integración Psíquica'],
+                  '14': ['Nueva Normalidad', 'Modelo Híbrido', 'Adaptación', 'Sociabilización', 'Salud Mental', 'Emociones'],
+                  '15': ['Adolescencia', 'Inteligencia Emocional', 'Educación Emocional', 'Relaciones Interpersonales', 'Salud Psicológica', 'Comunicación Abierta'],
+                  '16': ['Cambio Climático', 'Conciencia Ambiental', 'Crisis Global', 'Tiempo Restante', 'Salud Mental', 'Sublimación'],
+                  '17': ['Pandemia Permanente', 'Ciclo De Vida', 'Nueva Normalidad', 'Ganancia Secundaria', 'Industria Farmacéutica', 'Vacunación'],
+                  '18': ['Adolescencia', 'Desarrollo Psicosocial', 'Cuerpo En Crecimiento', 'Ruptura Familiar', 'Identidad Sexual', 'Habilidades Cognitivas'],
+                  '19': ['Locura', 'Estigmatizació Mental', 'Historia De La Psiquiatría', 'Normas Sociales', 'Adaptación Social', 'Salud Mental'],
+                  '20': ['Evolución De La Familia', 'Tipos De Familia', 'Cambios En La Familiar', 'Crisis De Los 40', 'Trabajo Y Familia', 'Divorcio Y Separación'],
+                  '21': ['Relación Cuerpo Mente', 'Impacto Emocional Covid', 'Angustia Y Ansiedad', 'Salud Mental PostCovid', 'Duelo Y Melancolía', 'Construcción Personal'],
+                  '22': ['Psicoanálisis', 'Compulsión A La Repetición', 'Año 2020', 'Recordar Para No Repetir', 'Cambio Personal', 'Repeticiones Sanas'],
+                  '23': ['Vida Y Muerte', 'Dualidad Existencial', 'Miedo A La Muerte', 'Sobrevivir VS Vivir', 'Elaboración De La Muerte', 'Pandemia'],
+                  '24': ['Impacto Del COVID', 'Salud Mental En México', 'Consecuencias Psicológicas', 'Ansiedad Y COVID', 'Ataques De Pánico', 'Agorafobia'],
+                  '25': ['Educación A Distancia', 'Educación En Línea', 'Resacas Emocionales', 'Ciclo Escolar En Casa', 'Responsabilidades Parentales', 'ReflexiónPersonal'],
+                  '26': ['Cuidado De La Salud Mental', 'Unión Familiar', 'Reflexión Personal', 'Solucione sAsertivas', 'Estructura En Casa', 'Espacios Personales'],
+                  '27': ['Estilo De Vida Saludable', 'Dieta Adecuada', 'Sueño', 'Ejercicio', 'Contacto Social', 'Apoyo Emocional'],
+              };
+
               const titleElement = document.querySelector('.blog-details__title');
               const dateElement = document.querySelector('.blog-details__date');
               const autorElement = document.querySelector('.autores_by');
+              const imageElement = document.querySelector('.blog-details__img img');
+              const blogTagsContainer = document.querySelector('.sidebar__tags-list');
           
               if (titles[blogId] && titleElement) {
                   titleElement.textContent = titles[blogId];
@@ -1603,6 +1651,23 @@
                 autorElement.textContent = autores[blogId];
               } else {
                   console.log('No title found for this ID or no ID provided.');
+              }
+
+              if (imagenes[blogId] && imageElement) {
+                imageElement.src = imagenes[blogId];
+              } else {
+                console.log('No image found for this ID or no ID provided.');
+              }
+
+              if (tags[blogId]) {
+                  blogTagsContainer.innerHTML = '';
+
+                  tags[blogId].forEach(tag => {
+                      const tagElement = document.createElement('a');
+                      tagElement.textContent = tag;
+                      tagElement.href = '#';
+                      blogTagsContainer.appendChild(tagElement);
+                  });
               }
               
           });
