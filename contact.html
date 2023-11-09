@@ -208,7 +208,6 @@
           </div>
           <div class="contact-page__form-box">
             <form
-              onsubmit="sendEmail(); reset(); return false;"
               class="contact-page__form contact-form-validated"
               method="post"
             >
@@ -233,7 +232,7 @@
                     <input
                       type="text"
                       placeholder="Número de teléfono"
-                      name="Phone"
+                      name="phone"
                       id="phone"
                     />
                   </div>
@@ -247,9 +246,9 @@
                       name="service"
                     >
                       <option selected>Selecciona un servicio</option>
-                      <option value="1">Terapia</option>
-                      <option value="2">Evaluaciones</option>
-                      <option value="3">Conferencias y Cursos</option>
+                      <option value="Terapia">Terapia</option>
+                      <option value="Evaluaciones">Evaluaciones</option>
+                      <option value="Conferencias y Cursos">Conferencias y Cursos</option>
                     </select>
                   </div>
                 </div>
@@ -258,6 +257,7 @@
                 <div class="col-xl-12">
                   <div class="contact-page__form-input-box text-message-box">
                     <textarea
+                      id="message"
                       name="message"
                       placeholder="Escribe tu mensaje"
                     ></textarea>
@@ -265,7 +265,7 @@
                   <div class="contact-page__form-btn-box">
                     <button
                       type="submit"
-                      class="thm-btn contact-page__form-btn"
+                      class="thm-btn contact-page__form-btn" onclick="sendEmailContacForm()"
                     >
                       Enviar
                     </button>
@@ -274,6 +274,24 @@
               </div>
             </form>
             <div class="result"></div>
+            <!-- Modal HTML -->
+<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      </button>
+      </div>
+      <div class="modal-body">
+        <!-- El mensaje de éxito se insertará aquí -->
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </section>
@@ -565,17 +583,85 @@
 
     <script src="assets/js/delogis.js"></script>
     <script>
-      function sendEmail() {
-        Email.send({
-          SecureToken : "0f0ecf8b-8735-47e9-99d8-fac0323d1bfa",
-          To : 'amoxtlidev@gmail.com',
-          From : document.getElementById("email").value,
-          Subject : "This is the subject",
-          Body : "And this is the body"
-      }).then(
-        message => alert(message)
-      );
+      function sendEmailContacForm() {
+          event.preventDefault();
+          const nombre = document.getElementById("name").value;
+          const correo = document.getElementById("email").value;
+          const telefono = document.getElementById("phone").value;
+          const servicio = document.getElementById("service").value;
+          const mensaje = document.getElementById("message").value;
+
+          // Estilos CSS en línea
+          const style = `
+              padding: 5px;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              background-color: #00253b;
+              font-family: Arial, sans-serif;
+              background-color: #15374C;
+              color: white;
+              text-align: center;
+          `
+          const thstyle = `
+              background-color: #EF502E;
+              color: white;
+              font-weight: bold;
+              padding: 8px;
+              text-align: left;
+          `
+
+          const tdstyle = `
+              border: 1px solid #ccc;
+              padding: 8px;
+          `
+
+          const btnstyle = `
+              display: inline-block;
+              background-color: #7fbc0c;
+              color: white;
+              padding: 8px 16px;
+              text-decoration: none;
+              border-radius: 4px;
+              margin-top: 20px;
+              font-weight: bold;
+          `
+
+          Email.send({
+              SecureToken: "0f0ecf8b-8735-47e9-99d8-fac0323d1bfa",
+              To: 'sof.db@outlook.com',
+              From: "amoxtlidev@gmail.com",
+              Subject: "Contacto",
+              Body: `
+                  <div>
+                    <img src="https://static.wixstatic.com/media/8743f3_73070ba723784ff29dcc305d5f56f14f~mv2.png/v1/fill/w_429,h_320,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo%20blanco%20R.png" alt="Imagen" style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding-bottom: 10px;" />
+                  </div>
+                  <div style="${style}">
+                      <h3 style="color: #fefefe;">Nuevo contacto</h3>
+                  </div>
+                  <div>
+                      <h3 style="color: #7fbc0c;">Datos del cliente</h3>
+                      <p style="color: black;"><strong style="color: black;">Nombre:</strong> ${nombre}</p>
+                      <p style="color: black;"><strong style="color: black;">Correo electrónico:</strong> ${correo}</p>
+                      <p style="color: black;"><strong style="color: black;">Número de teléfono:</strong> ${telefono}</p>
+                      <p style="color: black;"><strong style="color: black;">Servicio:</strong> ${servicio}</p>
+                      <p style="color: black;"><strong style="color: black;">Mensaje:</strong> ${mensaje}</p>
+                  </div>
+                  <a style="${btnstyle}" href="mailto:${correo}?subject=Respuesta%20contacto%20-%20${nombre}&body=Estimado%20Cliente,%0D%0A%0D%0ANos%20ponemos%20en%20contacto%20con%20usted%20debido%20al%20siguiente%20mensaje%20recibido:%0D%0A%0D%0A${mensaje}%0D%0A%0D%0AAtentamente,%0D%0APsique%0D%0A%0D%0A">Responder contacto</a>
+              `
+          }).then(message => {
+            var modalBody = document.querySelector('.modal-body');
+            modalBody.innerHTML = '<div style="text-align: center;"><img src="https://static.wixstatic.com/media/8743f3_73070ba723784ff29dcc305d5f56f14f~mv2.png/v1/fill/w_429,h_320,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo%20blanco%20R.png" alt="Imagen" style="display: block; margin-left: auto; margin-right: auto; width: 30%; padding-bottom: 10px;" /><p style="font-family: Arial, sans-serif; font-weight: bold;">¡Gracias, tu mensaje se ha enviado con éxito!</p></div>';
+            $('#emailModal').modal('show');
+            setTimeout(function() {
+                $('#emailModal').modal('hide');
+            }, 3000);
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("service").value = "";
+            document.getElementById("message").value = "";
+          });
       }
-    </script>
+  </script>
   </body>
 </html>
