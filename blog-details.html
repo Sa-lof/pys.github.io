@@ -263,13 +263,13 @@
                       </div>
                     </div>
                     <p class="blog-details__text-1">
-                      El 10 de octubre se conmemora el Día Mundial de la Salud Mental con el objetivo de concientizar acerca de los diferentes problemas de salud mental en todo el mundo y recordar que la salud mental es la base para construir vidas plenas y satisfactorias, por lo tanto, es un tema de interés para todos y no sólo para aquellos afectados por un trastorno mental transitorio o permanente.
+                      El 10 de octubre se conmemora el <strong style="color: #034873; font-weight: bold;"> Día Mundial de la Salud Mental </strong> con el objetivo de concientizar acerca de los diferentes problemas de salud mental en todo el mundo y recordar que la salud mental es la base para construir vidas plenas y satisfactorias, por lo tanto, es un tema de interés para todos y no sólo para aquellos afectados por un trastorno mental transitorio o permanente.
                     </p>
                     <p class="blog-details__text-2" style="color: #034873; font-weight: bold;">
                       ¿Qué es la salud mental?
                     </p>
                     <p class="blog-details__text-2">
-                      La Organización Mundial de la Salud (OMS) define a la Salud Mental como «un estado de bienestar en el cual cada individuo desarrolla su potencial, puede afrontar las tensiones de la vida, puede trabajar de forma productiva y fructífera, y puede aportar algo a su comunidad».
+                      La Organización Mundial de la Salud (OMS) define a la Salud Mental como <strong style="color: #034873; font-weight: bold;"> un estado de bienestar en el cual cada individuo desarrolla su potencial, puede afrontar las tensiones de la vida, puede trabajar de forma productiva y fructífera, y puede aportar algo a su comunidad.</strong>
                     </p>
                     <p class="blog-details__text-2">
                       La salud mental asocia con cuatro concepciones fundamentales:
@@ -1404,10 +1404,8 @@
                     <p class="blog-details__tags">
                     </p>
                     <div class="blog-details__social-list">
-                      <a href="#"><i class="fab fa-twitter"></i></a>
-                      <a href="#"><i class="fab fa-facebook"></i></a>
-                      <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                      <a href="#"><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.facebook.com/psiqueyser/"><i class="fab fa-facebook"></i></a>
+                      <a href="https://www.instagram.com/psique_ser/"><i class="fab fa-instagram"></i></a>
                     </div>
                   </div>
                 </div>
@@ -1428,9 +1426,9 @@
                 <div class="comment-form">
                   <h3 class="comment-form__title">Deja un comentario</h3>
                   <form
-                    action="assets/inc/sendemail.php"
                     class="comment-one__form contact-form-validated"
                     novalidate="novalidate"
+                    method="post"
                   >
                     <div class="row">
                       <div class="col-xl-6">
@@ -1438,7 +1436,7 @@
                           <input
                             type="text"
                             placeholder="Nombre"
-                            name="name"
+                            name="name" id="name"
                           />
                         </div>
                       </div>
@@ -1447,7 +1445,7 @@
                           <input
                             type="email"
                             placeholder="Correo electrónico"
-                            name="email"
+                            name="email" id="email"
                           />
                         </div>
                       </div>
@@ -1456,16 +1454,16 @@
                       <div class="col-xl-12">
                         <div class="comment-form__input-box text-message-box">
                           <textarea
-                            name="message"
+                            name="message" id="message"
                             placeholder="Comentario"
                           ></textarea>
                         </div>
                         <div class="comment-form__btn-box">
                           <button
                             type="submit"
-                            class="thm-btn comment-form__btn"
+                            class="thm-btn comment-form__btn" onclick="sendEmailContacForm()"
                           >
-                            Submit Comment
+                            Enviar comentario
                           </button>
                         </div>
                       </div>
@@ -1604,14 +1602,14 @@
               };
 
               const dates = {
-                  '0': '0 sept',
-                  '1': '4 sept',
-                  '2': '1 ago',
-                  '3': '2 jun',
-                  '4': '29 abr',
-                  '5': '10 abr',
-                  '6': '1 mar',
-                  '7': '1 feb',
+                  '0': '31 oct',
+                  '1': '31 ago',
+                  '2': '31 jul',
+                  '3': '31 may',
+                  '4': '28 abr',
+                  '5': '31 mar',
+                  '6': '28 feb',
+                  '7': '31 ene',
                   '8': '11 ago 2022',
                   '9': '10 jun 2022',
                   '10': '4 may 2022',
@@ -1635,7 +1633,7 @@
               };
 
               const autores = {
-                  '0': 'Psic. Brenda Linares. | Psicóloga en Red Clínica de Psique & Ser',
+                  '0': 'Psic. Ruth González. | Psicóloga en Red Clínica de Psique & Ser',
                   '1': 'Psic. Brenda Linares. | Psicóloga en Red Clínica de Psique & Ser',
                   '2': 'Psic. Paola Estrada. | Psicóloga en Red Clínica de Psique & Ser',
                   '3': 'Psic. Teresita Quintana. | Psicóloga en Red Clínica de Psique & Ser',
@@ -1666,6 +1664,7 @@
               };
 
               const imagenes = {
+                  '0': 'assets/images/blog/blog0.png',
                   '1': 'assets/images/blog/blog1.png',
                   '2': 'assets/images/blog/blog2.png',
                   '3': 'assets/images/blog/blog3.png',
@@ -1696,6 +1695,7 @@
               };
 
               const tags = {
+                  '0': ['Derecho universal', 'Salud Mental', 'Bienestar', 'Equilibrio', 'Calidad de vida', 'Relaciones de calidad'],
                   '1': ['Prevención del Suicidio', 'Salud Mental', 'Estigma Social', 'Apoyo Psicológico', 'Intervención en Crisis', 'Día Mundial para la Prevención del Suicidio'],
                   '2': ['Parentalidad', 'Competencias Parentales', 'Crianza', 'Salud Mental', 'Relación Padres E Hijos', 'Descanso Parental'],
                   '3': ['Posmodernidad', 'Redes Sociales', 'Comunicación Digital', 'Consumismo', 'Relaciones Sociales', 'Identidad Social'],
@@ -1837,7 +1837,7 @@
                   <ul class="footer-widget__link-list list-unstyled">
                     <li><a href="index.html">Inicio</a></li>
                     <li>
-                      <a href="about.html" >Nosotros</a>
+                      <a href="about.html" target="_blank">Nosotros</a>
                     </li>
                     <li><a href="team.html">Red Clínica</a></li>
                     <li><a href="cases-1.html">Espacio Psicoeducativo</a></li>
@@ -1890,7 +1890,7 @@
                       <div class="text">
                         <span>Número telefónico</span>
                         <p>
-                          <a href="tel:+5215534458029">+52 1 55 3445 8029</a>
+                          <a href="tel:+55-3445-8029">+55-3445-8029</a>
                         </p>
                       </div>
                     </li>
@@ -1985,6 +1985,23 @@
       </div>
       <!-- /.search-popup__content -->
     </div>
+                <!-- Modal HTML -->
+<div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      </button>
+      </div>
+      <div class="modal-body">
+        <!-- El mensaje de éxito se insertará aquí -->
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
     <!-- /.search-popup -->
 
     <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
@@ -2011,8 +2028,120 @@
     <script src="assets/vendors/timepicker/timePicker.js"></script>
     <script src="assets/vendors/circleType/jquery.circleType.js"></script>
     <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 
     <!-- template js -->
     <script src="assets/js/delogis.js"></script>
+    <script>
+      function sendEmailContacForm() {
+          event.preventDefault();
+          const queryString = window.location.search;
+          const urlParams = new URLSearchParams(queryString);
+          const blogId = urlParams.get('id');
+
+          const titles = {
+                  '0': 'Salud mental, un derecho universal',
+                  '1': 'Suicidio: Mitos y realidades. Desmitificando un fenómeno complejo',
+                  '2': 'Competencias parentales.¿Qué hace a una mamá, a un papá ser eficientes?',
+                  '3': 'La ruptura del lazo social como consecuencia de la posmodernidad',
+                  '4': 'Disciplina positiva: un método de crianza para niños',
+                  '5': 'La obesidad, como un tejido entre la alimentación y los afecto',
+                  '6': 'Relaciones sanas en la adolescencia: Amor y amistad',
+                  '7': 'Rituales de inicio de año y sus efectos en nuestra psique',
+                  '8': '¿Qué enfoque psicológico es el adecuado para mi para tomar terapia?',
+                  '9': 'La normalización del estrés',
+                  '10': 'La era de la procastinación',
+                  '11': 'La dualidad éxito-fracaso.',
+                  '12': 'Año Nuevo, casualidades o causalidades nuevas.',
+                  '13': 'La muerte en la vida.',
+                  '14': 'La hibridez en nuestras vidas.',
+                  '15': 'Autoconcepto y equilibrio emocional en la adolescencia.',
+                  '16': 'El mundo que habito.',
+                  '17': 'La ganancia secundaria. Una crítica a nuestra situación actual.',
+                  '18': 'Hablemos de adolescentes.',
+                  '19': 'Sociedad y locur.',
+                  '20': 'La familia en épocas modernas.',
+                  '21': '¿Post Covid-19?',
+                  '22': '¿Un año para el olvido?',
+                  '23': 'Un año pandémico no es un año perdido.',
+                  '24': 'Consecuencias psicológicas en un año pandémico.',
+                  '25': 'Un diferente retorno a las escuelas.',
+                  '26': 'Nuestro estado emocional ante el COVID-19',
+                  '27': 'Lidiar con el estrés en momentos de pandemia.',
+              };
+
+          const nombre = document.getElementById("name").value;
+          const correo = document.getElementById("email").value;
+          const mensaje = document.getElementById("message").value;
+          const titleElement = titles[blogId];
+
+          // Estilos CSS en línea
+          const style = `
+              padding: 5px;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              background-color: #00253b;
+              font-family: Arial, sans-serif;
+              background-color: #15374C;
+              color: white;
+              text-align: center;
+          `
+          const thstyle = `
+              background-color: #EF502E;
+              color: white;
+              font-weight: bold;
+              padding: 8px;
+              text-align: left;
+          `
+
+          const tdstyle = `
+              border: 1px solid #ccc;
+              padding: 8px;
+          `
+
+          const btnstyle = `
+              display: inline-block;
+              background-color: #7fbc0c;
+              color: white;
+              padding: 8px 16px;
+              text-decoration: none;
+              border-radius: 4px;
+              margin-top: 20px;
+              font-weight: bold;
+          `
+
+          Email.send({
+              SecureToken: "0f0ecf8b-8735-47e9-99d8-fac0323d1bfa",
+              To: 'psique_ser@outlook.com',
+              From: "amoxtlidev@gmail.com",
+              Subject: "Blog",
+              Body: `
+                  <div>
+                    <img src="https://static.wixstatic.com/media/8743f3_73070ba723784ff29dcc305d5f56f14f~mv2.png/v1/fill/w_429,h_320,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo%20blanco%20R.png" alt="Imagen" style="display: block; margin-left: auto; margin-right: auto; width: 50%; padding-bottom: 10px;" />
+                  </div>
+                  <div style="${style}">
+                      <h3 style="color: #fefefe;">Comentario de blog</h3>
+                  </div>
+                  <div>
+                      <h3 style="color: #7fbc0c;">Blog: ${titleElement}</h3>
+                      <p style="color: black;"><strong style="color: black;">Nombre:</strong> ${nombre}</p>
+                      <p style="color: black;"><strong style="color: black;">Correo electrónico:</strong> ${correo}</p>
+                      <p style="color: black;"><strong style="color: black;">Mensaje:</strong> ${mensaje}</p>
+                  </div>
+                  <a style="${btnstyle}" href="mailto:${correo}?subject=Respuesta%20contacto%20-%20${nombre}&body=Estimado%20Cliente,%0D%0A%0D%0ANos%20ponemos%20en%20contacto%20con%20usted%20debido%20al%20siguiente%20mensaje%20recibido:%0D%0A%0D%0A${mensaje}%0D%0A%0D%0AAtentamente,%0D%0APsique%0D%0A%0D%0A">Responder comentario</a>
+              `
+          }).then(message => {
+            var modalBody = document.querySelector('.modal-body');
+            modalBody.innerHTML = '<div style="text-align: center;"><img src="https://static.wixstatic.com/media/8743f3_73070ba723784ff29dcc305d5f56f14f~mv2.png/v1/fill/w_429,h_320,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo%20blanco%20R.png" alt="Imagen" style="display: block; margin-left: auto; margin-right: auto; width: 30%; padding-bottom: 10px;" /><p style="font-family: Arial, sans-serif; font-weight: bold;">¡Gracias, tu mensaje se ha enviado con éxito!</p></div>';
+            $('#emailModal').modal('show');
+            setTimeout(function() {
+                $('#emailModal').modal('hide');
+            }, 3000);
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+          });
+      }
+  </script>
   </body>
 </html>
