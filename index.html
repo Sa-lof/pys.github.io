@@ -1260,20 +1260,28 @@
                   <ul class="footer-widget__Contact-list list-unstyled">
                     <li>
                       <div class="icon">
-                        <span class="fas fa-map-marker"></span>
+                        <span style="color: white;" class="fas fa-map-marker"></span>
                       </div>
-                      <div class="text">
-                        <span>Dirección</span>
-                        <p>Miraflores 837, Miravalle, Benito Juárez 03580</p>
-                      </div>
-                      <div class="text">
-                        <span>Dirección</span>
-                        <p>Hamburgo 15, Juárez. Cuauhtémoc 06660</p>
+                      <div class="row">
+                        <style>
+                          .text-extra p {
+                            word-spacing: -1px !important; /* o un valor negativo como -1px para reducir el espacio */
+                            letter-spacing: -1px !important; 
+                          }
+                        </style>
+                        <div class="text text-extra col-6 pr-4">
+                          <span>Dirección</span>
+                          <p>Miraflores 837, Miravalle, Benito Juárez 03580</p>
+                        </div>
+                        <div class="text text-extra col-6">
+                          <span>Dirección</span>
+                          <p>Hamburgo 15, Juárez. Cuauhtémoc 06660</p>
+                        </div>
                       </div>
                     </li>
                     <li>
                       <div class="icon">
-                        <span class="fas fa-envelope"></span>
+                        <span style="color: white;" class="fas fa-envelope"></span>
                       </div>
                       <div class="text">
                         <span>Correo electrónico</span>
@@ -1286,7 +1294,7 @@
                     </li>
                     <li>
                       <div class="icon">
-                        <span class="fas fa-phone-square"></span>
+                        <span style="color: white;" class="fas fa-phone-square"></span>
                       </div>
                       <div class="text">
                         <span>Número telefónico</span>
