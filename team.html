@@ -1125,6 +1125,35 @@
         }
       </script>
 
+      <!-- Modal HTML -->
+      <div class="modal fade" id="emailModal30" tabindex="-30" role="dialog" aria-labelledby="modalLabel" aria-hidden="true" style="background-color: transparent; border-color: transparent;">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content pt-3">
+            <!-- Imagen circular que sobresale del modal -->
+            <img src="assets/images/team/32.png" alt="" class="rounded-circle modal-img">
+            <!-- Botón de cerrar en la esquina superior derecha -->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="email30()" style="background-color: transparent; border-color: transparent;">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <!-- Título centrado debajo de la imagen -->
+            <div class="text-center pt-3">
+              <h5 class="modal-title modal-title-centered">Dr. Armando Coronel </h5>
+            </div>
+            <div class="modal-body">
+              <p style="color: black;" class="textstyle">Psiquiatra y somnologo egresado del Instituto de Psiquiatría. Maestro de Ciencias Médicas. Profesor de psicología médica en la facultad de medicina de la UNAM. Cuenta con experiencia en atención a trastornos del estado de ánimo, de personalidad y del sueño. Colabora con la red clínica atendiendo pacientes de forma presencial y en línea.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function sendEmailContacForm30(){
+          $('#emailModal30').modal('show');
+        }
+        function email30(){
+          $("#emailModal30").modal('hide');
+        }
+      </script>
+
       <!--Team Page Start-->
       <section class="team-page">
         <div class="container">
@@ -2519,6 +2548,52 @@
                 </div>
               </div>
               <a href="#" class="know-more-btn btn" onclick="sendEmailContacForm29()" style="font-family: var(--delogis-font);">Semblanza</a>
+            </div>
+            <div class="wow fadeInUp item" data-wow-delay="100ms">
+              <div class="team-one__single">
+                <div class="team-one__img-box">
+                  <div class="team-one__img">
+                    <img src="assets/images/team/32.png" alt="" />
+                  </div>
+                  <div class="team-one__shape-1"></div>
+                  <div class="team-one__name-box">
+                    <h3>
+                      <span>Dr. Armando Coronel</span>
+                    </h3>
+                  </div>
+                  <div class="team-one__sub-title-and-share-btn">
+                    <div class="team-one__sub-title">
+                      <p>- Psiquiatra en Red Clínica de Psique & Ser A.C.</p>
+                    </div>
+                    <div class="team-one__share-and-email">
+                      <a href=""><span class="fa fa-share-alt"></span></a>
+                    </div>
+                  </div>
+                  <ul class="list-unstyled team-one__social">
+                    <li>
+                      <a href="https://wa.me/5534458029" target="_blank"
+                        ><i class="fab fa-whatsapp"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.facebook.com/psiqueyser/"
+                        target="_blank"
+                        ><i class="fab fa-facebook"></i
+                      ></a>
+                    </li>
+
+                    <li>
+                      <a
+                        href="https://www.instagram.com/psique_ser/"
+                        target="_blank"
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <a href="#" class="know-more-btn btn" onclick="sendEmailContacForm30()" style="font-family: var(--delogis-font);">Semblanza</a>
             </div>
           </div>
         </div>
